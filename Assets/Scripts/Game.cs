@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
 	public GameUI GameUI; 
 	public Settings GameSettings;
 	public Player GamePlayer;
+	public Animator BunnyAnimator;
 	public List<Enemy> Enemies; 
 
 	public Model GameModel;
@@ -14,7 +15,7 @@ public class Game : MonoBehaviour
 	public void OnEnable()
 	{
 		GameModel = new Model(GameSettings, GamePlayer);
-		GameView = new View(GameUI, GameModel);
+		GameView = new View(GameUI, BunnyAnimator, GameModel);
 
 		for (int i = 0; i < Enemies.Count; i++)
 		{
@@ -24,7 +25,7 @@ public class Game : MonoBehaviour
 	
 	void Update()
     {
-	    CreateProjectileSystem.Execute(GameModel);
+	    CreateProjectileSystem.Execute(GameModel, GameView);
 	    ClearInputSystem.Execute(GameModel);
 	    ScoreViewSystem.Execute(GameModel, GameView);
     }
