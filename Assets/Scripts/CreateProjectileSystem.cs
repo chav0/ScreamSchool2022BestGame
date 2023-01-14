@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public static class CreateProjectileSystem
 {
 	public static void Execute(Model model, View view)

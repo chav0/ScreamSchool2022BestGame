@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+
 public class GameUI : MonoBehaviour
 {
 	public Controller Controller;
