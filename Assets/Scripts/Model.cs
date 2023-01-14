@@ -22,13 +22,12 @@ public class Model
 
 	public void CreateProjectile(float angle, float forceRatio)
 	{
-		var projectileObject = Object.Instantiate(GameSettings.ProjectilePrefab, Vector3.up, Quaternion.identity);
+		var projectileObject = Object.Instantiate(GameSettings.ProjectilePrefab, Player.transform.position + Vector3.up, Quaternion.identity);
 		var projectile = projectileObject.GetComponent<Projectile>(); 
 		Projectiles.Add(projectile);
 
 		var vector = Quaternion.Euler( -GameSettings.angle, angle, 0f) * Player.transform.forward;
-		var force = GameSettings.force * forceRatio * vector; 
-		Debug.Log($"{angle} {force} {Player.transform.forward}");
+		var force = GameSettings.force * forceRatio * vector;
 		projectile.Rigidbody.AddForce(force, ForceMode.Impulse);
 		
 		CurrentAmmoAmount -= 1; 
