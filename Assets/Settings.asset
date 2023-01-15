@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e63f443c8b394cc49976f3163a77346, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
+  Language: 1
   angle: 15
   force: 40
   ammoClipSize: 10

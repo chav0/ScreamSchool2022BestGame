@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour
 	
 	private void OnCollisionEnter(Collision collision)
 	{
+		if (!collision.gameObject.TryGetComponent<Projectile>(out var projectile))
+			return;
+		
+		projectile.OnCollisionSound.Play();
+		
 		// Увеличиваем скор на 1
 		Model.CurrentScore += 1;
 		

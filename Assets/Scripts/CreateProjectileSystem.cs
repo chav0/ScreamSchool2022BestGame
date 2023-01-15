@@ -8,6 +8,7 @@ public static class CreateProjectileSystem
 		{
 			model.CreateProjectile(model.Input.Angle, model.Input.ForceRatio);
 			view.BunnyAnimator.SetTrigger("Attack");
+			model.Player.PunchSound.Play();
 		}
 	}
 }
