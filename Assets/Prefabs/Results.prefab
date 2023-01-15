@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6459233990662214779}
   - component: {fileID: 2908183931095984265}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4650678329883717492}
   - component: {fileID: 5550066619713060953}
+  - component: {fileID: 6153933084406807938}
   m_Layer: 5
   m_Name: Results
   m_TagString: Untagged
@@ -168,6 +169,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673189941636300392}
   m_CullTransparentMesh: 1
+--- !u!114 &6153933084406807938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673189941636300392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162bcf3c48210424a9a288d011e60a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResultText: {fileID: 6432972365383988692}
+  RestartText: {fileID: 3467292895054678592}
+  NextText: {fileID: 2204115559189668238}
+  Restart: {fileID: 5969431533876805529}
+  Next: {fileID: 2908183931095984265}
 --- !u!1 &1836272115124932903
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +199,7 @@ GameObject:
   - component: {fileID: 2234758762427307235}
   - component: {fileID: 5969431533876805529}
   m_Layer: 5
-  m_Name: Button
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +407,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -437,7 +455,7 @@ GameObject:
   - component: {fileID: 664399639111561816}
   - component: {fileID: 3467292895054678592}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RestartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,7 +670,7 @@ GameObject:
   - component: {fileID: 8094858443841320701}
   - component: {fileID: 2204115559189668238}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NextText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

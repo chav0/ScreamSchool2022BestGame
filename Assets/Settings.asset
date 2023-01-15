@@ -17,3 +17,8 @@ MonoBehaviour:
   force: 40
   ammoClipSize: 10
   ProjectilePrefab: {fileID: 6541858343306856108, guid: 065b9fa69347b44df809b4ef1a48446a, type: 3}
+  Levels:
+  - Num: 1
+    SceneId: 1
+  - Num: 2
+    SceneId: 2

@@ -8,16 +8,22 @@ public class Model
 	public int CurrentAmmoAmount;
 	public PlayerInput Input;
 
-	public Player Player; 
-	public List<Projectile> Projectiles = new List<Projectile>(); 
+	public Player Player;
+	public List<Enemy> Enemies;
+	public List<Projectile> Projectiles = new List<Projectile>();
 
-	public Model(Settings settings, Player player)
+	public bool GameOver;
+	public int Level; 
+
+	public Model(Settings settings, Player player, List<Enemy> enemies, int level)
 	{
 		CurrentScore = 0;
 		CurrentAmmoAmount = settings.ammoClipSize;
 		GameSettings = settings;
-		Player = player; 
-		Input = new PlayerInput(); 
+		Player = player;
+		Enemies = enemies;
+		Input = new PlayerInput();
+		Level = level; 
 	}
 
 	public void CreateProjectile(float angle, float forceRatio)
